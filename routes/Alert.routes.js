@@ -22,5 +22,12 @@ router.post("/:token", async (req, res) => {
     res.status(401).send("Token no valido");
   }
 });
+router.post("/influx/:token", async (req, res) => {
+  //ruta de envio de alertas
+  //get token bearer and decode
+  const token = req.params.token;
+  console.log(req.body);
+});
 
+//influx
 module.exports = router;
